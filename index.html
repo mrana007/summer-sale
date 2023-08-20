@@ -30,7 +30,7 @@
             <!-- kitchenware card section -->
             <div class="flex-1 grid gid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- first card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div onclick="handleClick(this)" class="card bg-base-100 shadow-xl">
                     <figure class="pt-5 px-5">
                       <img src="./images/prod1.png" alt="prod1" class="rounded-xl bg-gray-300 py-7 px-16"/>
                     </figure>
@@ -47,7 +47,7 @@
                     </div>
                   </div>
                 <!-- second card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div onclick="handleClick(this)" class="card bg-base-100 shadow-xl">
                     <figure class="pt-5 px-5">
                       <img src="./images/prod2.png" alt="prod1" class="rounded-xl bg-gray-300 py-8 px-16"/>
                     </figure>
@@ -64,7 +64,7 @@
                     </div>
                   </div>
                 <!-- third card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div onclick="handleClick(this)" class="card bg-base-100 shadow-xl">
                     <figure class="pt-5 px-5">
                       <img src="./images/prod3.png" alt="prod1" class="rounded-xl bg-gray-300 py-8 px-16"/>
                     </figure>
@@ -88,7 +88,7 @@
             <!-- Sportswear card section -->
             <div class="flex-1 grid gid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- first card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div onclick="handleClick(this)" class="card bg-base-100 shadow-xl">
                     <figure class="pt-5 px-5">
                       <img src="./images/prod4.png" alt="prod6" class="rounded-xl bg-gray-300 py-12 px-16"/>
                     </figure>
@@ -105,7 +105,7 @@
                     </div>
                   </div>
                 <!-- second card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div onclick="handleClick(this)" class="card bg-base-100 shadow-xl">
                     <figure class="pt-5 px-5">
                       <img src="./images/prod5.png" alt="prod5" class="w-[300px] h-[200px] rounded-xl bg-gray-300 py-6 px-16"/>
                     </figure>
@@ -122,7 +122,7 @@
                     </div>
                   </div>
                 <!-- third card -->
-                <div class="card bg-base-100 shadow-xl">
+                <div onclick="handleClick(this)" class="card bg-base-100 shadow-xl">
                     <figure class="pt-5 px-5">
                       <img src="./images/prod6.png" alt="prod6" class="rounded-xl bg-gray-300 py-8 px-16"/>
                     </figure>
@@ -141,7 +141,7 @@
             </div>
         </div>
         </div>
-        <!-- calculation section -->
+        <!-- purchase calculation section -->
         <div>
           <!-- coupon section -->
           <div class="pl-5 pt-20">
@@ -156,10 +156,11 @@
         <!-- purchase section -->
         <div class="pl-5 pt-5">
           <div class="w-80 bg-white rounded-lg p-6">
+            <div id="selected-items" class="pb-4"></div>
             <hr class="py-3">
-            <h1 class="text-xl font-medium pb-3">Total Price: <span class="font-normal">00TK</span></h1>
+            <h1 class="text-xl font-medium pb-3">Total Price: <span class="font-normal" id="total-price">00</span>TK</h1>
             <h1 class="text-xl font-medium pb-3">Discount: <span class="font-normal">00TK</span></h1>
-            <h1 class="text-xl font-medium pb-3">Total: <span class="font-normal">00TK</span></h1>
+            <h1 class="text-xl font-medium pb-3">Total: <span class="font-normal" id="total">00</span>TK</h1>
             <hr class="py-3">
             <div class="relative">
               <button class="btn btn-primary absolute w-full bottom-0 top-0 right-0 rounded-lg bg-[#E527B2] text-white">Make Purchase</button>
@@ -169,5 +170,6 @@
         </div>
       </section>
     </main>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>
