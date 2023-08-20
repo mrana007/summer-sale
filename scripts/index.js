@@ -1,10 +1,12 @@
 let totalPrice = 0;
+let itemCounter = 1;
 function handleClick(target){
     const selectedItemContainer = document.getElementById('selected-items')
     const purchaseItem =target.childNodes[3].childNodes[3].innerText;
-    const li = document.createElement('li');
-    li.innerText = purchaseItem;
-    selectedItemContainer.appendChild(li);
+    const ol = document.createElement('ol');
+    ol.innerText = `${itemCounter}. ${purchaseItem}`;
+    selectedItemContainer.appendChild(ol);
+    itemCounter++;
     const price = target.childNodes[3].childNodes[5].innerText.split(" ")[0];
     totalPrice = parseFloat(totalPrice) + parseFloat(price);
     document.getElementById('total-price').innerText = totalPrice.toFixed(2);
