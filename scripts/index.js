@@ -10,18 +10,19 @@ function handleClick(target){
     document.getElementById('total-price').innerText = totalPrice.toFixed(2);
     document.getElementById('total').innerText = totalPrice.toFixed(2);
     const purchaseButton = document.getElementById('purchase-button');
+    
     if (totalPrice > 0) {
-        purchaseButton.removeAttribute("disabled");
+        purchaseButton.removeAttribute('disabled');
     }
     else {
-        purchaseButton.setAttribute("disabled", "disabled");
+        purchaseButton.setAttribute('disabled', 'disabled');
     }
     const applyButton = document.getElementById('apply-button');
     if (totalPrice >= 200) {
-        applyButton.removeAttribute("disabled");
+        applyButton.removeAttribute('disabled');
     }
     else {
-        applyButton.setAttribute("disabled", "disabled");
+        applyButton.setAttribute('disabled', 'disabled');
     }
     document.getElementById('apply-button').addEventListener('click', applyCoupon);
     function applyCoupon() {
@@ -37,4 +38,12 @@ function handleClick(target){
             alert('Please insert valid coupon');
         }
     }
+    function finalTotal() {
+        const totalWithDiscount = totalPrice - discount;
+        const total = document.getElementById('total');
+        total.innerText = totalWithDiscount.toFixed(2);
+    }
+    document.getElementById('go-home').addEventListener('click', function(){
+        window.location.href = 'index.html';
+    })
 }
