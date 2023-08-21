@@ -17,14 +17,14 @@ function handleClick(target){
         purchaseButton.removeAttribute('disabled');
     }
     else {
-        purchaseButton.setAttribute('disabled');
+        purchaseButton.setAttribute('disabled', 'true');
     }
     const applyButton = document.getElementById('apply-button');
     if (totalPrice >= 200) {
         applyButton.removeAttribute('disabled');
     }
     else {
-        applyButton.setAttribute('disabled');
+        applyButton.setAttribute('disabled', 'true');
     }
     document.getElementById('apply-button').addEventListener('click', applyCoupon);
     function applyCoupon() {
@@ -37,7 +37,7 @@ function handleClick(target){
             finalTotal();
         }
         else{
-            alert('Please insert valid coupon');
+            alert('Coupon is not valid');
         }
     }
     function finalTotal() {
@@ -48,4 +48,4 @@ function handleClick(target){
 }
 document.getElementById('go-home').addEventListener('click', function(){
     window.location.href = 'index.html';
-})
+});
